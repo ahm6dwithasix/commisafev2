@@ -76,7 +76,7 @@ interface ContractTableProps {
 }
 
 const ContractTable: React.FC<ContractTableProps> = ({
-  contracts = defaultContracts,
+  contracts = [],
   userRole = "brand",
   onViewContract,
   onEditContract,
@@ -618,86 +618,5 @@ const ContractTable: React.FC<ContractTableProps> = ({
     </div>
   );
 };
-
-// Sample data for default display
-const defaultContracts: Contract[] = [
-  {
-    id: "1",
-    campaignName: "Summer Collection Promotion",
-    influencerName: "Alex Johnson",
-    influencerEmail: "alex@influencer.com",
-    commission: 15,
-    startDate: new Date("2023-06-01"),
-    endDate: new Date("2023-08-31"),
-    status: "active",
-    totalSales: 24500,
-    totalCommission: 3675,
-    lastPayout: new Date("2023-07-15"),
-    maxBudget: 10000,
-  },
-  {
-    id: "2",
-    campaignName: "Fall Fashion Launch",
-    influencerName: "Samantha Lee",
-    influencerEmail: "samantha@influencer.com",
-    commission: 12,
-    startDate: new Date("2023-09-01"),
-    endDate: new Date("2023-11-30"),
-    status: "pending",
-    maxBudget: 8000,
-  },
-  {
-    id: "3",
-    campaignName: "Holiday Special",
-    influencerName: "Mike Williams",
-    influencerEmail: "mike@influencer.com",
-    commission: 20,
-    startDate: new Date("2023-11-15"),
-    endDate: new Date("2023-12-31"),
-    status: "pending",
-    maxBudget: 15000,
-  },
-  {
-    id: "4",
-    campaignName: "Spring Collection",
-    influencerName: "Emma Davis",
-    influencerEmail: "emma@influencer.com",
-    commission: 18,
-    startDate: new Date("2023-03-01"),
-    endDate: new Date("2023-05-31"),
-    status: "completed",
-    totalSales: 35000,
-    totalCommission: 6300,
-    lastPayout: new Date("2023-06-05"),
-    maxBudget: 12000,
-  },
-  {
-    id: "5",
-    campaignName: "Tech Gadget Promotion",
-    influencerName: "Ryan Cooper",
-    influencerEmail: "ryan@influencer.com",
-    commission: 25,
-    startDate: new Date("2023-07-15"),
-    endDate: new Date("2023-09-15"),
-    status: "failed",
-    totalSales: 2000,
-    totalCommission: 500,
-    maxBudget: 20000,
-  },
-  {
-    id: "6",
-    campaignName: "Fitness Challenge",
-    influencerName: "Jessica Kim",
-    influencerEmail: "jessica@influencer.com",
-    commission: 15,
-    startDate: new Date("2023-01-01"),
-    endDate: new Date("2023-03-31"),
-    status: "completed",
-    totalSales: 42000,
-    totalCommission: 6300,
-    lastPayout: new Date("2023-04-05"),
-    maxBudget: 10000,
-  },
-];
 
 export default ContractTable;

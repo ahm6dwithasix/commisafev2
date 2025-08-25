@@ -59,65 +59,16 @@ const BrandDashboard = ({
 }: BrandDashboardProps) => {
   const [isContractFormOpen, setIsContractFormOpen] = useState(false);
 
-  // Mock data for stats cards
+  // Empty data for stats cards
   const statsData = {
-    pendingPayouts: "$2,450.00",
-    completedPayouts: "$18,765.50",
-    failedPayouts: "$320.00",
-    totalPaid: "$21,535.50",
+    pendingPayouts: "$0.00",
+    completedPayouts: "$0.00",
+    failedPayouts: "$0.00",
+    totalPaid: "$0.00",
   };
 
-  // Mock data for contracts table
-  const contracts = [
-    {
-      id: "1",
-      campaignName: "Summer Collection Launch",
-      influencer: "@fashionista",
-      influencerEmail: "fashion@example.com",
-      commission: "12%",
-      startDate: "2023-06-01",
-      endDate: "2023-08-31",
-      status: "active",
-      totalPaid: "$1,245.00",
-      pendingAmount: "$450.00",
-    },
-    {
-      id: "2",
-      campaignName: "Holiday Special",
-      influencer: "@travelguru",
-      influencerEmail: "travel@example.com",
-      commission: "15%",
-      startDate: "2023-11-15",
-      endDate: "2024-01-15",
-      status: "pending",
-      totalPaid: "$0.00",
-      pendingAmount: "$0.00",
-    },
-    {
-      id: "3",
-      campaignName: "Tech Gadget Review",
-      influencer: "@techreview",
-      influencerEmail: "tech@example.com",
-      commission: "10%",
-      startDate: "2023-05-01",
-      endDate: "2023-07-31",
-      status: "completed",
-      totalPaid: "$3,200.00",
-      pendingAmount: "$0.00",
-    },
-    {
-      id: "4",
-      campaignName: "Fitness Challenge",
-      influencer: "@fitnessguru",
-      influencerEmail: "fitness@example.com",
-      commission: "18%",
-      startDate: "2023-09-01",
-      endDate: "2023-10-31",
-      status: "failed",
-      totalPaid: "$850.00",
-      pendingAmount: "$320.00",
-    },
-  ];
+  // Empty contracts array
+  const contracts: any[] = [];
 
   const handleCreateContract = (data: any) => {
     // Here you would typically make an API call to create a contract
